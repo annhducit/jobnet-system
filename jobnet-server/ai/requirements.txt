@@ -1,0 +1,9 @@
+django == 4.2.5
+djangorestframework == 3.14.0
+openai == 0.28.0
+django-cors-headers == 4.2.0
+py-eureka-client == 0.11.7
+pytesseract == 0.3.10
+PyMuPDF == 1.23.4
+
+

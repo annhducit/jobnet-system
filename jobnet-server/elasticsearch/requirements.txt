@@ -1,0 +1,9 @@
+django == 4.2.5
+djangorestframework == 3.14.0
+langchain
+elasticsearch == 7.17
+django-elasticsearch-dsl
+elasticsearch-dsl
+django-elasticsearch-dsl-drf
+google-generativeai 
+langchain-google-genai

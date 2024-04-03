@@ -1,0 +1,30 @@
+{
+        "scripts": {
+                "serve": "run-p serve-post serve-business serve-user serve-common serve-jobnet serve-jobnet_recruiter serve-jobnet_admin",
+                "serve-post": "cd post && npm run serve",
+                "serve-business": "cd business && npm run serve",
+                "serve-user": "cd user && npm run serve",
+                "serve-common": "cd common && npm run serve",
+                "serve-jobnet": "cd jobnet && npm run serve",
+                "serve-jobnet_recruiter": "cd jobnet_recruiter && npm run serve",
+                "serve-jobnet_admin": "cd jobnet_admin && npm run serve",
+
+                "build": "run-p build-post build-business build-user build-common build-jobnet build-jobnet_recruiter build-jobnet_admin",
+                "build-post": "cd post && npm run build",
+                "build-business": "cd business && npm run build",
+                "build-user": "cd user && npm run build",
+                "build-common": "cd common && npm run build",
+                "build-jobnet": "cd jobnet && npm run build",
+                "build-jobnet_recruiter": "cd jobnet_recruiter && npm run build",
+                "build-jobnet_admin": "cd jobnet_admin && npm run build",
+                
+                "install": "run-p install-post install-business install-user install-common install-jobnet install-jobnet_recruiter install-jobnet_admin",
+                "install-post": "cd post && npm install",
+                "install-business": "cd business && npm install",
+                "install-user": "cd user && npm install",
+                "install-common": "cd common && npm install",
+                "install-jobnet": "cd jobnet && npm install",
+                "install-jobnet_recruiter": "cd jobnet_recruiter && npm install",
+                "install-jobnet_admin": "cd jobnet_admin && npm install"
+        }
+}

@@ -1,0 +1,449 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Apply css for background login and signup page */
+  .overlay-background-authenticate {
+    background: #e0eafc;
+    background: -webkit-linear-gradient(to bottom, #cfdef3, #e0eafc);
+    background: linear-gradient(to bottom, #cfdef3, #e0eafc);
+  }
+  /* Gradient for background business list */
+  .background-overlay-list-bussinesss {
+    background: transparent
+      linear-gradient(6deg, #fff, #c4ffdd 100%, rgba(195, 255, 221, 0.702) 0) 0
+      0 no-repeat padding-box;
+  }
+
+  /* Break word when text too long */
+  .multiline-ellipsis {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  /* Admin button */
+  .bg-button-admin-details {
+    background-color: #0a65cc;
+  }
+
+  .bg-button-admin-details:hover {
+    background-color: #094dab;
+  }
+
+  .bg-button-admin-approved {
+    background-color: #fdf6b2;
+  }
+
+  .bg-button-admin-approved:hover {
+    background-color: #e6db7c;
+  }
+
+  .bg-button-admin-rejected {
+    background-color: #fce8f3;
+  }
+
+  .bg-button-admin-rejected:hover {
+    background-color: #f3aed4;
+  }
+  /* =================================================================== */
+}
+
+html,
+body {
+  max-width: 100%;
+}
+
+/* Override flowbite css */
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='datetime-local']:focus,
+[type='month']:focus,
+[type='search']:focus,
+[type='tel']:focus,
+[type='time']:focus,
+[type='week']:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: transparent;
+  border-color: currentColor;
+}
+
+button {
+  --tw-ring-color: transparent;
+  border-color: currentColor;
+}
+
+/* Scrollbar CSS */
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(22, 24, 35, 0.12);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+}
+
+h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 0.33em;
+  margin-bottom: 0.33em;
+}
+
+ul {
+  list-style-type: disc;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-left: 1em;
+}
+
+/* Skeleton */
+.skeleton {
+  background-image: linear-gradient(
+    110deg,
+    #ffffff 8%,
+    #eeeeee 18%,
+    #fefefefe 53%
+  );
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
+}
+
+/* Show element hidden */
+.group:hover .show {
+  display: block;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  .modal-resume_layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Dashboard */
+  .section-heading {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* Subsection */
+  .sub-section {
+    width: 25%;
+  }
+  .hidden-section {
+    display: block;
+    width: 100%;
+  }
+  /* Update Post */
+  .post-update {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+  /* RC Account */
+  .recruiter-profile {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 155px;
+  }
+  /* Header Home */
+  .header-home {
+    padding-left: 2rem /* 32px */;
+    padding-right: 2rem /* 32px */;
+  }
+
+  /* Header Unregister */
+  .header-unregister {
+    display: block;
+  }
+
+  /* Header Authenticated */
+  .header-authenticated {
+    display: block;
+  }
+
+  .header-authenticated_second {
+    display: flex;
+  }
+
+  .header-item {
+    display: flex;
+    margin-left: 32px;
+    gap: 24px;
+  }
+  .hidden-item {
+    display: flex;
+    gap: 16px;
+  }
+
+  /* Footer */
+  .footer {
+    padding-left: 6rem /* 96px */;
+    padding-right: 6rem /* 96px */;
+    padding-top: 3rem /* 48px */;
+  }
+  .sub-footer {
+    margin-top: 5rem;
+    text-align: left;
+  }
+
+  /* Home Recruiter */
+  .grid-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Post Management */
+  .item-input {
+    width: 700px;
+    gap: 32px;
+    display: flex;
+  }
+
+  .item-parent {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+  }
+
+  /* Main Layout */
+  .main-layout {
+    padding: 24px;
+  }
+
+  /* Application Page */
+  .applications-page {
+    width: 600px;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .applications-page_second {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .applicant-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1023px) and (min-width: 640px) {
+  .modal-resume_layout {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  /* Update Post */
+  .post-update {
+    display: grid;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+
+  /* Header Home */
+  .header-home {
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+  }
+
+  /* Header Unregister */
+  .header-unregister {
+    display: block;
+  }
+  /* Header Authenticated */
+  .header-authenticated {
+    display: block;
+  }
+  .header-authenticated_second {
+    display: flex;
+  }
+  .header-item {
+    display: flex;
+    margin-left: 8px;
+    gap: 8px;
+    flex-direction: row;
+  }
+
+  .hidden-item {
+    display: none;
+  }
+
+  /* Home Recruiter */
+  .grid-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Post Management */
+  .item-input {
+    width: 700px;
+    gap: 32px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Main Layout */
+  .main-layout {
+    padding: 16px;
+  }
+
+  /* Applicant */
+  .applicant-item {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 639px) {
+  .modal-resume_layout {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  /* Dashboard */
+  .section-heading {
+    width: 300px;
+    padding: 8px;
+  }
+
+  .sub-section {
+    width: 270px;
+  }
+
+  .hidden-section {
+    display: none;
+  }
+  /* Update Post */
+  .post-update {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  /* RC Account */
+  .recruiter-profile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+  /* Header Home */
+  .header-home {
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+  }
+
+  /* Header Unregister */
+  .header-unregister {
+    display: none;
+  }
+  /* Header Authenticated */
+  .header-authenticated {
+    display: none;
+  }
+  .header-authenticated_second {
+    display: hidden;
+  }
+  .header-item {
+    display: none;
+  }
+
+  .hidden-item {
+    display: none;
+  }
+  /* Footer */
+  .footer {
+    padding-left: 1rem /* 16px */;
+    padding-right: 1rem /* 16px */;
+  }
+
+  .sub-footer {
+    margin-top: 2.5rem;
+    text-align: center;
+  }
+
+  /* Home Recruiter */
+  .grid-layout {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  /* Post Management */
+  .item-input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-parent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Main Layout */
+  .main-layout {
+    padding: 4px;
+  }
+
+  /* Application Page */
+  .applications-page {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+  /* Applicant */
+  .applicant-item {
+    flex-direction: column;
+  }
+
+  .applications-page_second {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

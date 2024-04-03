@@ -1,0 +1,16 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: wishlist
+
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: ${CONFIG_USERNAME:config}
+      password: ${CONFIG_PASSWORD:password}
+
+  config:
+    import: "optional:configserver:"
+
